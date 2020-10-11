@@ -26,7 +26,7 @@ public class LoginTest {
 	public void doLogin() throws InterruptedException{
 		driver.get("http://gmail.com");
 		driver.findElement(By.id("identifierId")).sendKeys("sajinkrishnan@gmail.com");
-		Thread.sleep(5000);
+		Thread.sleep(4000);
 //		driver.findElement(By.id("Pawd")).sendKeys("sdfdsf");	
 	}
 	
