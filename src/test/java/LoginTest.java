@@ -17,7 +17,8 @@ public class LoginTest {
 	@BeforeSuite
 	public void setUp(){
 		
-		WebDriverManager.chromedriver().setup();
+//		WebDriverManager.chromedriver().setup();
+		System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"//chromedriver.exe");
 		driver = new ChromeDriver();
 		driver.manage().window().fullscreen();
 	}
