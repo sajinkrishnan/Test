@@ -5,6 +5,8 @@ import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Test;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
+
 
 public class LoginTest {
 	
@@ -14,10 +16,8 @@ public class LoginTest {
 	@BeforeSuite
 	public void setUp(){
 		
+		WebDriverManager.firefoxdriver().setup();
 		driver = new FirefoxDriver();
-		
-		
-		
 	}
 
 	@Test
