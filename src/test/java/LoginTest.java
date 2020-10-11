@@ -18,13 +18,14 @@ public class LoginTest {
 		
 		WebDriverManager.firefoxdriver().setup();
 		driver = new FirefoxDriver();
+		driver.manage().window().fullscreen();
 	}
 
 	@Test
 	public void doLogin() throws InterruptedException{
 		driver.get("http://gmail.com");
 		driver.findElement(By.id("identifierId")).sendKeys("sajinkrishnan@gmail.com");
-		Thread.sleep(10000);
+		Thread.sleep(5000);
 //		driver.findElement(By.id("Pawd")).sendKeys("sdfdsf");	
 	}
 	
