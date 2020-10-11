@@ -21,19 +21,11 @@ public class LoginTest {
 	}
 
 	@Test
-	public void doLogin(){
-		
-		
+	public void doLogin() throws InterruptedException{
 		driver.get("http://gmail.com");
-		driver.findElement(By.id("Email")).sendKeys("trainer@way2automation.com");
-		driver.findElement(By.id("Pawd")).sendKeys("sdfdsf");
-	/*
-	 * 
-	 * added new comments
-	 * 
-	 */
-	
-	
+		driver.findElement(By.id("identifierId")).sendKeys("sajinkrishnan@gmail.com");
+		Thread.sleep(10000);
+//		driver.findElement(By.id("Pawd")).sendKeys("sdfdsf");	
 	}
 	
 	@AfterSuite
