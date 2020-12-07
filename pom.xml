@@ -28,7 +28,7 @@
 		<dependency>
 			<groupId>com.aventstack</groupId>
 			<artifactId>extentreports</artifactId>
-			<version>4.0.9</version>
+			<version>4.1.4</version>
 		</dependency>
 	
 		<!-- https://mvnrepository.com/artifact/org.uncommons/reportng -->
@@ -122,6 +122,16 @@
             </configuration>
           </plugin>
     </plugins>
+    
+    <testResources>
+			<testResource>
+				<directory>/properties</directory>
+				<includes>
+					<include>log4j.properties</include>
+				</includes>
+			</testResource>
+	</testResources>
+		
    </build>
 
 </project>

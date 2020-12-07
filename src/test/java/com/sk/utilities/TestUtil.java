@@ -25,8 +25,7 @@ public class TestUtil extends BaseTest {
 		Date d = new Date();
 		screenshotName = d.toString().replace(":", "_").replace(" ", "_") + ".jpg";
 		screenshotPath = System.getProperty("user.dir") + "\\target\\surefire-reports\\html\\" + screenshotName;
-		FileUtils.copyFile(scrFile,
-				new File(screenshotPath));
+		FileUtils.copyFile(scrFile,new File(screenshotPath));
 
 	}
 

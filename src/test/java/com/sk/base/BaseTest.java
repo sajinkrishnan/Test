@@ -3,6 +3,8 @@ package com.sk.base;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
@@ -13,6 +15,7 @@ import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.support.ui.Select;
@@ -43,7 +46,7 @@ public class BaseTest {
 	public static Properties config = new Properties();
 	public static Properties OR = new Properties();
 	public static FileInputStream fis;
-	public static Logger log;
+	public static Logger log  = Logger.getLogger("devpinoyLogger");
 
 	public static ExcelReader excel = new ExcelReader(
 			System.getProperty("user.dir") + "\\excel\\testdata.xlsx");
@@ -53,7 +56,7 @@ public class BaseTest {
 
 	@BeforeSuite
 	public void setUp() {
-		log = Logger.getLogger("TestLogger");
+	//	log = Logger.getLogger("TestLogger");
 	    PropertyConfigurator.configure("log4j.properties");
 
 		if (driver == null) {
@@ -112,7 +115,17 @@ public class BaseTest {
 						System.getProperty("user.dir") + "\\src\\test\\resources\\executables\\chromedriver.exe");
 			*/	
 				WebDriverManager.chromedriver().setup();
-				driver = new ChromeDriver();
+				Map<String, Object> prefs = new HashMap<String, Object>();
+				prefs.put("profile.default_content_setting_values.notifications", 2);
+				prefs.put("credentials_enable_service", false);
+				prefs.put("profile.password_manager_enabled", false);
+				ChromeOptions options = new ChromeOptions();
+				options.setExperimentalOption("prefs", prefs);
+				options.addArguments("--disable-extensions");
+				options.addArguments("--disable-infobars");
+
+				driver = new ChromeDriver(options);
+	//			driver = new ChromeDriver();
 				log.debug("Chrome Launched !!!");
 			} else if (config.getProperty("browser").equals("ie")) {
 
@@ -207,6 +220,7 @@ public class BaseTest {
 					+ " height=200 width=200></img></a>");
 			Reporter.log("<br>");
 			Reporter.log("<br>");
+			
 			// Extent Reports
 			ExtentListeners.testReport.get().log(Status.FAIL, " Verification failed with exception : " + t.getMessage());
 			//CustomListeners.testReport.get().log(Status.FAIL, CustomListeners.testReport.get().addScreenCaptureFromPath(TestUtil.screenshotName));
