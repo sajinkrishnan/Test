@@ -60,7 +60,7 @@ public class BaseTest {
 
 			try {
 				fis = new FileInputStream(
-						System.getProperty("user.dir") + "\\properties\\Config.properties");
+						System.getProperty("user.dir") + "/properties/Config.properties");
 			} catch (FileNotFoundException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
@@ -75,7 +75,7 @@ public class BaseTest {
 
 			try {
 				fis = new FileInputStream(
-						System.getProperty("user.dir") + "\\properties\\OR.properties");
+						System.getProperty("user.dir") + "/properties/OR.properties");
 			} catch (FileNotFoundException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
