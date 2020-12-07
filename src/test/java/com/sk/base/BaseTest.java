@@ -46,7 +46,7 @@ public class BaseTest {
 	public static Logger log;
 
 	public static ExcelReader excel = new ExcelReader(
-			System.getProperty("user.dir") + "\\excel\\testdata.xlsx");
+			System.getProperty("user.dir") + "/excel/testdata.xlsx");
 	public static WebDriverWait wait;
 
 	public static String browser;
