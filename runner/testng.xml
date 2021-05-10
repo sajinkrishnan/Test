@@ -3,8 +3,8 @@
 <suite name="Data Driven Basics" parallel="methods" thread-count="2">
     
   <listeners>
-      <listener class-name="org.uncommons.reportng.HTMLReporter"/>
-      <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
+    <!--  <listener class-name="org.uncommons.reportng.HTMLReporter"/>
+      <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>-->
       <listener class-name="com.sk.listeners.ExtentListeners"/>
   </listeners>
     
@@ -15,22 +15,22 @@
 		</classes>
 	</test> <!-- Test -->
 
-	<test name="Add Customer Test">
+	 <!--<test name="Add Customer Test">
 		<classes>
 			<class name="com.sk.testcases.AddCustomerTest" />
 		</classes>
-	</test> <!-- Test -->
+	</test>
 	
 	<test name="Open Account Test">
 		<classes>
 			<class name="com.sk.testcases.OpenAccountTest" />
 		</classes>
-	</test> <!-- Test -->
+	</test>
 	
 	<test name="Test1">
 		<classes>
 			<class name="com.sk.testcases.LoginTest" />
 		</classes>
-	</test>
+	</test>-->
 	
 </suite> <!-- Suite -->

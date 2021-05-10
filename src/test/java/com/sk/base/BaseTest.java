@@ -57,7 +57,7 @@ public class BaseTest {
 	@BeforeSuite
 	public void setUp() {
 	//	log = Logger.getLogger("TestLogger");
-	    PropertyConfigurator.configure("log4j.properties");
+	    PropertyConfigurator.configure(System.getProperty("user.dir") + "\\properties\\log4j.properties");
 
 		if (driver == null) {
 

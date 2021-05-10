@@ -30,7 +30,7 @@ import com.sk.utilities.TestUtil;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-public class ExtentListeners extends BaseTest implements ITestListener,ISuiteListener {
+public class ExtentListeners implements ITestListener,ISuiteListener {
 
 	static Date d = new Date();
 	static String fileName = "Extent_" + d.toString().replace(":", "_").replace(" ", "_") + ".html";
@@ -43,13 +43,7 @@ public class ExtentListeners extends BaseTest implements ITestListener,ISuiteLis
 		
 
 	}
-	
-//	public void onTestStart(ITestContext context) {
-//		
-//		ExtentTest test = extent.createTest(context.getName());
-//        testReport.set(test);
-//
-//	}
+
 
 	public void onTestStart(ITestResult result) {
 		ExtentTest test = extent.createTest(result.getTestClass().getName()+"     @TestCase : "+result.getMethod().getMethodName());
