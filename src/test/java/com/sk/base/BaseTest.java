@@ -49,7 +49,7 @@ public class BaseTest {
 	public static Logger log  = Logger.getLogger("devpinoyLogger");
 
 	public static ExcelReader excel = new ExcelReader(
-			System.getProperty("user.dir") + "\\excel\\testdata.xlsx");
+			System.getProperty("user.dir") + "/excel/testdata.xlsx");
 	public static WebDriverWait wait;
 
 	public static String browser;
@@ -63,7 +63,7 @@ public class BaseTest {
 
 			try {
 				fis = new FileInputStream(
-						System.getProperty("user.dir") + "\\properties\\Config.properties");
+						System.getProperty("user.dir") + "/properties/Config.properties");
 			} catch (FileNotFoundException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
@@ -78,7 +78,7 @@ public class BaseTest {
 
 			try {
 				fis = new FileInputStream(
-						System.getProperty("user.dir") + "\\properties\\OR.properties");
+						System.getProperty("user.dir") + "/properties/OR.properties");
 			} catch (FileNotFoundException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
