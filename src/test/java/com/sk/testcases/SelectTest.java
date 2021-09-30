@@ -1,4 +1,4 @@
-package com.sk.testcases;
+ package com.sk.testcases;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -24,8 +24,7 @@ public class SelectTest {
 		
 		driver.findElement(cutomerLoginBtn).click();
 		Thread.sleep(2000);
-		
-		
+
 		Select s = new Select(driver.findElement(selectDrop));
 		s.selectByIndex(1);
 		System.out.println(driver.findElement(loginBtn).isDisplayed());
@@ -34,8 +33,6 @@ public class SelectTest {
 		
 		driver.quit();
 		
-		
-
 	}
 
 }
