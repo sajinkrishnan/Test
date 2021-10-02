@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<!-- <suite name="Data Driven Basics" parallel="methods" thread-count="2"> -->
+
+<suite name="Test NG Samples" >       
+<!--	<test name="Test the Order of Execution">
+		<classes>
+			<class name="com.sk.testngsamples.OrderOfExecutionTest" />
+		</classes>
+	</test>
+	
+	<test name="Test the Priority of Execution">
+		<classes>
+			<class name="com.sk.testngsamples.PriorityOfExecutionTest" />
+		</classes>
+	</test>  -->
+	
+	<test name="Test the Other">
+		<classes>
+			<!--<class name="com.sk.testngsamples.DependsTest" />-->
+			<class name="com.sk.testngsamples.OtherConcepts" />
+			<!--<class name="com.sk.testngsamples.AnnontationsTest" />-->
+		</classes>
+	</test>
+	
+	<test name="Test the Group Depends">
+		<groups>
+    		<run>
+    		 <include name="Sanit" />
+           	<!--  <exclude name="Regression"></exclude> -->
+        	</run>
+   		</groups>
+		<classes>
+			<class name="com.sk.testngsamples.GroupsDepends" />
+		</classes>
+	</test>
+	
+</suite> <!-- Suite -->

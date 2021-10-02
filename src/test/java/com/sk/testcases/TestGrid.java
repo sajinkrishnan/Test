@@ -32,14 +32,14 @@ public class TestGrid {
 	public static void main(String[] args) throws MalformedURLException, InterruptedException {
 			//throws InterruptedException {
 //		System.setProperty("webdriver.gecko.driver","C:\\Users\\Cruise\\Downloads\\Selenium\\geckodriver.exe");
-		GridURL="http://192.168.0.104:4444/wd/hub";
+		GridURL="http://192.168.56.1:4444/wd/hub";
 		DesiredCapabilities dc = DesiredCapabilities.firefox();
 //		DesiredCapabilities dc = DesiredCapabilities.chrome();
 //		ChromeOptions options = new ChromeOptions();
 		FirefoxOptions options = new FirefoxOptions();
 		dc.setBrowserName("firefox");
-		dc.setPlatform(Platform.WINDOWS);
-//		dc.setPlatform(Platform.LINUX);
+//		dc.setPlatform(Platform.WINDOWS);
+		dc.setPlatform(Platform.LINUX);
 //		dc.setVersion("92.0.1");
 	//	dc.setCapability(FirefoxDriver.BINARY, new File("C:\\Program Files\\Mozilla Firefox\\firefox.exe"));
 //		dc.setJavascriptEnabled(true);

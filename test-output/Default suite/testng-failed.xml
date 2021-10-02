@@ -3,12 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="testcases.TestCase2">
+      <class name="com.sk.testngsamples.OtherConcepts">
         <methods>
-          <include name="isSkip"/>
-          <include name="doUserReg"/>
+          <include name="cTest"/>
+          <include name="eTest"/>
+          <include name="bTest"/>
         </methods>
-      </class> <!-- testcases.TestCase2 -->
+      </class> <!-- com.sk.testngsamples.OtherConcepts -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

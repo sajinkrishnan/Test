@@ -29,7 +29,7 @@ public class HomePage {
 	@FindBy(xpath="//button[text()='Bank Manager Login']")
 	private WebElement managerLoginBtn;
 	
-	@FindBy(xpath="//strong[@class='mainHeading1']")
+	@FindBy(xpath="//strong[@class='mainHeading']")
 	private WebElement heading;
 	
 	public String getHeading()

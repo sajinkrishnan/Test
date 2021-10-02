@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Test NG Samples]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Test the Other(failed)">
+    <classes>
+      <class name="com.sk.testngsamples.OtherConcepts">
+        <methods>
+          <include name="cTest"/>
+          <include name="eTest"/>
+          <include name="bTest"/>
+        </methods>
+      </class> <!-- com.sk.testngsamples.OtherConcepts -->
+    </classes>
+  </test> <!-- Test the Other(failed) -->
+</suite> <!-- Failed suite [Test NG Samples] -->
