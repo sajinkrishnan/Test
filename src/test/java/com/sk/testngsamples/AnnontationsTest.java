@@ -1,6 +1,5 @@
 package com.sk.testngsamples;
 
-import org.testng.SkipException;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterSuite;
@@ -14,33 +13,34 @@ import org.testng.annotations.Test;
 
 public class AnnontationsTest {
 		
-	//enabled=false will disable the methods
+	//enabled=false will disable the methods including all the before/after methods if specified.
 	
-	@BeforeSuite
+	@BeforeSuite()
 	public void beforeSuite()
 	{
 		System.out.println("Before Suite");
 	}
 	
-	@BeforeClass
-	public void beforeClass()
-	{
-		System.out.println("Before Class");
-	}
-	
-	@BeforeMethod(alwaysRun=true)
-	public void beforeMethod()
-	{
-		System.out.println("Before Method");
-	}
-	
-	@BeforeTest
+	@BeforeTest(enabled=false)
 	public void beforeTest()
 	{
 		System.out.println("Before Test");
 	}
 	
-
+	
+	@BeforeClass(enabled=false)
+	public void beforeClass()
+	{
+		System.out.println("Before Class");
+	}
+	
+	@BeforeMethod(enabled=false)
+	public void beforeMethod()
+	{
+		System.out.println("Before Method");
+	}
+	
+	@Test
 	public void aTest()
 	{
 		System.out.println("Inside aTest AT");
@@ -49,15 +49,11 @@ public class AnnontationsTest {
 	@Test
 	public void bTest()
 	{
+		int a = 10/0;
 		System.out.println("Inside bTest AT");
 	}
 	
-	@AfterTest
-	public void afterTest()
-	{
-		System.out.println("After Test");
-	}
-	
+
 	@AfterMethod
 	public void afterMethod()
 	{
@@ -69,6 +65,13 @@ public class AnnontationsTest {
 	{
 		System.out.println("After Class");
 	}
+	
+	@AfterTest
+	public void afterTest()
+	{
+		System.out.println("After Test");
+	}
+	
 	
 	@AfterSuite
 	public void afterSuite()

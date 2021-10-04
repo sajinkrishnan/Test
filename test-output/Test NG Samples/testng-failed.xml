@@ -1,15 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [Test NG Samples]" guice-stage="DEVELOPMENT">
-  <test thread-count="5" name="Test the Other(failed)">
+  <test thread-count="5" name="Test the Group Depends(failed)">
+    <groups>
+      <run>
+        <include name="All"/>
+        <exclude name="Sanity3"/>
+      </run>
+    </groups>
     <classes>
-      <class name="com.sk.testngsamples.OtherConcepts">
+      <class name="com.sk.testngsamples.GroupsDepends">
         <methods>
-          <include name="cTest"/>
-          <include name="eTest"/>
-          <include name="bTest"/>
+          <include name="bGroupTest"/>
+          <include name="aGroupTest"/>
+          <include name="cGroupTest"/>
         </methods>
-      </class> <!-- com.sk.testngsamples.OtherConcepts -->
+      </class> <!-- com.sk.testngsamples.GroupsDepends -->
     </classes>
-  </test> <!-- Test the Other(failed) -->
+  </test> <!-- Test the Group Depends(failed) -->
 </suite> <!-- Failed suite [Test NG Samples] -->

@@ -32,7 +32,7 @@ public class BankManagerLoginTest extends BaseTest {
 		HomePage hp= new HomePage(driver);
 		String heading = hp.getHeading();
 		log.debug("Heading is ::"+heading);
-	//	ExtentListeners.testReport.get().log(Status.PASS, heading);
+		ExtentListeners.testReport.get().log(Status.PASS, heading);
 		Assert.assertEquals(heading,"XYZ Bank");
 		Thread.sleep(2000);
 

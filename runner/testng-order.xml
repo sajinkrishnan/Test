@@ -18,16 +18,21 @@
 	<test name="Test the Other">
 		<classes>
 			<!--<class name="com.sk.testngsamples.DependsTest" />-->
-			<class name="com.sk.testngsamples.OtherConcepts" />
-			<!--<class name="com.sk.testngsamples.AnnontationsTest" />-->
+			<!--<class name="com.sk.testngsamples.OtherConcepts" />-->
+			<class name="com.sk.testngsamples.AnnontationsTest" >
+				<methods>
+       				 <include name="aTest"/>
+      				 <exclude name="aTest"/>
+      			</methods>
+			</class>	
 		</classes>
 	</test>
 	
 	<test name="Test the Group Depends">
 		<groups>
     		<run>
-    		 <include name="Sanit" />
-           	<!--  <exclude name="Regression"></exclude> -->
+    		 <include name="All" />
+           	 <exclude name="Sanity3" />
         	</run>
    		</groups>
 		<classes>

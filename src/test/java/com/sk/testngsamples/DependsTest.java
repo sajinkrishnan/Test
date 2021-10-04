@@ -7,9 +7,9 @@ public class DependsTest {
 	
 	
 	//Test will run only if the depends on test passes. otherwise skipped.
-	//Cyclid dependency occurs if the dependency is looped and none of the tests in the class are executed.
+	//Cyclic dependency occurs if the dependency is looped and none of the tests in the class are executed.
 	
-	@Test
+	@Test(priority=1)
 	public void bTest()
 	{
 		System.out.println("Inside Method bTest");

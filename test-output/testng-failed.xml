@@ -3,13 +3,14 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.sk.testcases.BankManagerLoginTest">
+      <class name="com.sk.testngsamples.GroupsDepends">
         <methods>
-          <include name="tearDown"/>
-          <include name="setUp"/>
-          <include name="bankManagerLoginTest"/>
+          <include name="bGroupTest"/>
+          <include name="dGroupTest"/>
+          <include name="afterTest"/>
+          <include name="cGroupTest"/>
         </methods>
-      </class> <!-- com.sk.testcases.BankManagerLoginTest -->
+      </class> <!-- com.sk.testngsamples.GroupsDepends -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
