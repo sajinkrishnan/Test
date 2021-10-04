@@ -2,6 +2,7 @@ package com.sk.testcases;
 
 import java.io.IOException;
 
+import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
 import org.testng.Assert;
 import org.testng.Reporter;
@@ -14,6 +15,7 @@ import com.sk.pageobjects.HomePage;
 
 public class BankManagerLoginTest extends BaseTest {
 
+	public static Logger log = Logger.getLogger(BankManagerLoginTest.class);
 	
 //	@Test
 //	public void bankManagerLoginTest() throws InterruptedException, IOException{		
@@ -32,6 +34,8 @@ public class BankManagerLoginTest extends BaseTest {
 		HomePage hp= new HomePage(driver);
 		String heading = hp.getHeading();
 		log.debug("Heading is ::"+heading);
+		log.info("SK Heading is ::"+heading);
+		
 		ExtentListeners.testReport.get().log(Status.PASS, heading);
 		Assert.assertEquals(heading,"XYZ Bank");
 		Thread.sleep(2000);

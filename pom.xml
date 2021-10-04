@@ -123,14 +123,14 @@
           </plugin>
     </plugins>
     
-    <testResources>
+  <!--  <testResources>
 			<testResource>
 				<directory>/properties</directory>
 				<includes>
 					<include>log4j.properties</include>
 				</includes>
 			</testResource>
-	</testResources>
+	</testResources> -->
 		
    </build>
 

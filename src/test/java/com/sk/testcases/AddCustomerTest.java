@@ -22,11 +22,11 @@ public class AddCustomerTest extends BaseTest {
 			throw new SkipException("Skipping the test case as the Run mode for data set is NO");
 		}
 		
-		click("addCustBtn_CSS");
-		type("firstname_CSS",data.get("firstname"));
-		type("lastname_XPATH",data.get("lastname"));
-		type("postcode_CSS",data.get("postcode"));
-		click("addbtn_CSS");
+		TestUtil.click("addCustBtn_CSS");
+		TestUtil.type("firstname_CSS",data.get("firstname"));
+		TestUtil.type("lastname_XPATH",data.get("lastname"));
+		TestUtil.type("postcode_CSS",data.get("postcode"));
+		TestUtil.click("addbtn_CSS");
 		Thread.sleep(2000);
 		Alert alert = wait.until(ExpectedConditions.alertIsPresent());
 		
